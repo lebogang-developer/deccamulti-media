@@ -1,0 +1,536 @@
+/* Mobile-first default styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+/* Top Contact Info */
+.top-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.top-contact a {
+  color: #333;
+  text-decoration: none;
+  margin: 0.2rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.top-contact a i {
+  margin-right: 6px;
+}
+
+.contact-left,
+.contact-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-right a {
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-right a:hover {
+  color: #1d4ed8;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .top-contact {
+    flex-direction: row;
+  }
+
+  .contact-left {
+    justify-content: flex-start;
+  }
+
+  .contact-right {
+    justify-content: flex-end;
+  }
+
+  .top-contact a {
+    margin: 0 0.75rem;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo img {
+  height: 50px; /* Adjust height to fit nicely in nav */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 40px; /* Slightly smaller logo on mobile */
+  }
+}
+
+/* Navigation Section */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+
+.nav-links li {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-links a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #111827;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #111827;
+}
+
+/* Show nav on medium and larger screens */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    border: none;
+    background: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('https://media.istockphoto.com/id/2149181352/photo/portrait-of-print-shop-worker-using-heating-press-on-textile-product.jpg?s=1024x1024&w=is&k=20&c=sspBN5gaa6JrV4J2sNCflNQURsnlLBl7uGQqFxxwc74=')
+    center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  overflow: hidden;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #d97706;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
+/* About Section */
+.about {
+  position: relative;
+  background: url('https://media.istockphoto.com/id/1266994277/photo/we-are-unique-digital-print-workshop-so-we-are-perfect-for-your-alternative-style.jpg?s=1024x1024&w=is&k=20&c=uir3tFNSc2ywRLez37ad1x9d-uoOeJHxKv5n6hFkNTM=')
+    center/cover fixed no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+  z-index: 1;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about h2 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.service-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f59e0b;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.service-card .view-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f59e0b;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.service-card .view-more:hover {
+  background-color: #d97706;
+}
+
+@media (min-width: 640px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Brands Section */
+.brands {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.brands h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.brand-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.brand-track {
+  display: flex;
+  width: calc(250px * 8); /* Adjust based on number of images */
+  animation: scrollBrands 20s linear infinite;
+}
+
+.brand-track img {
+  width: 200px;
+  height: auto;
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+/* Animation */
+@keyframes scrollBrands {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .brand-track img {
+    width: 150px;
+    margin: 0 0.5rem;
+  }
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-category {
+  margin-bottom: 3rem;
+}
+
+.portfolio-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.portfolio-grid img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile first */
+@media (max-width: 768px) {
+  .portfolio-grid img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 0 0;
+  background-color: #f3f4f6;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.contact-info i {
+  margin-right: 8px;
+  color: #1f2937;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.9rem;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #111827;
+}
+
+/* Map */
+.map {
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .map iframe {
+    height: 250px;
+  }
+}
